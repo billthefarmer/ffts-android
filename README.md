@@ -4,7 +4,7 @@ FFTS Android
 This is a fork of the [FFST project](https://github.com/anthonix/ffts)
 for Android. I was unable to get this to build using the android build
 script provided, and rather than waste time and effort investigating
-the arcane autoconf/automake build system, moved the folders about to
+the arcane autoconf/automake build system, moved the folders about so
 that it can be built with the Android NDK build script.
 
 The [app](https://github.com/billthefarmer/scope) that I want to use
@@ -35,4 +35,4 @@ shows how to test:
 
 However, the code structure is built around the autoconf/automake
 premise that you build your library for your proposed use, rather than
-build it to cope with different co-processors. I'm not going there.
+build it to cope with different ARM processors. I'm not going there.
