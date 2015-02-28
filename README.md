@@ -35,4 +35,6 @@ shows how to test:
 
 However, the code structure is built around the autoconf/automake
 premise that you build your library for your proposed use, rather than
-build it to cope with different ARM processors. I'm not going there.
+build it to cope with different ARM processors. I've got around this
+by building two libraries and determining which to load at run
+time. This reuires a third library just to check the processor.
