@@ -53,7 +53,8 @@ LOCAL_LDLIBS := -llog
 
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
 LOCAL_MODULE := ffts-neon
-LOCAL_CFLAGS += -DHAVE_NEON -mfpu=neon
+LOCAL_CFLAGS += -DHAVE_NEON
+LOCAL_ARM_NEON := true
 LOCAL_SRC_FILES += \
 	src/codegen.c \
 	src/neon.s
