@@ -1,5 +1,4 @@
-FFTS Android
-============
+# FFTS [![Build Status](https://travis-ci.org/billthefarmer/ffts-android.svg?branch=master)](https://travis-ci.org/billthefarmer/ffts-android)
 
 This is a fork of the [FFST project](https://github.com/anthonix/ffts)
 for Android. I was unable to get this to build using the android build
