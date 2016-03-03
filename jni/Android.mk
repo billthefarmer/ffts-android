@@ -31,9 +31,9 @@ LOCAL_CFLAGS += -DHAVE_VFP
 LOCAL_SRC_FILES += \
 	src/codegen.c \
 	src/vfp.s
-endif
 
 include $(BUILD_SHARED_LIBRARY)
+endif
 
 include $(CLEAR_VARS)
 
@@ -58,8 +58,34 @@ LOCAL_ARM_NEON := true
 LOCAL_SRC_FILES += \
 	src/codegen.c \
 	src/neon.s
-endif
 
 include $(BUILD_SHARED_LIBRARY)
+endif
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := ffts
+LOCAL_C_INCLUDES := jni/include jni/src
+LOCAL_CFLAGS := -DHAVE_DECL_MEMALIGN -std=c99 \
+	-Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
+LOCAL_SRC_FILES := \
+	ffts_jni.c \
+	src/ffts.c \
+	src/ffts_nd.c \
+	src/ffts_real.c \
+	src/ffts_real_nd.c \
+	src/ffts_small.c \
+	src/patterns.c
+LOCAL_LDLIBS := -llog 
+
+ifeq ($(TARGET_ARCH_ABI),x86_64)
+LOCAL_MODULE := ffts-sse
+LOCAL_CFLAGS += -DHAVE_SSE
+LOCAL_SRC_FILES += \
+	src/codegen.c \
+	src/sse.s
+
+include $(BUILD_SHARED_LIBRARY)
+endif
 
 $(call import-module,android/cpufeatures)
