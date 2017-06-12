@@ -40,6 +40,7 @@
 #include <math.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <malloc.h>
 //#include <stdalign.h>
 
 //#include "codegen.h"

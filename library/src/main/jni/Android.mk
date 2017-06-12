@@ -12,7 +12,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := ffts
-LOCAL_C_INCLUDES := jni/include jni/src
+LOCAL_C_INCLUDES := src/main/jni/include src/main/jni/src
 LOCAL_CFLAGS := -DHAVE_DECL_MEMALIGN -std=c99 \
 	-Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 LOCAL_SRC_FILES := \
@@ -38,7 +38,7 @@ endif
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := ffts
-LOCAL_C_INCLUDES := jni/include jni/src
+LOCAL_C_INCLUDES := src/main/jni/include src/main/jni/src
 LOCAL_CFLAGS := -DHAVE_DECL_MEMALIGN -std=c99 \
 	-Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 LOCAL_SRC_FILES := \
@@ -65,7 +65,7 @@ endif
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := ffts
-LOCAL_C_INCLUDES := jni/include jni/src
+LOCAL_C_INCLUDES := src/main/jni/include src/main/jni/src
 LOCAL_CFLAGS := -DHAVE_DECL_MEMALIGN -std=c99 \
 	-Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 LOCAL_SRC_FILES := \
