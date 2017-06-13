@@ -16,7 +16,7 @@ ABI does not guarantee NEON support. The following code snippet from
 the NDK docs
 ([CPU ARM Neon](http://www.kandroid.org/ndk/docs/CPU-ARM-NEON.html))
 shows how to test:
-
+```c
     #include <cpu-features.h>
     ...
     ...
@@ -31,7 +31,7 @@ shows how to test:
         // use non-NEON fallback routines instead
         ...
     }
-
+```
 However, the code structure is built around the autoconf/automake
 premise that you build your library for your proposed use, rather than
 build it to cope with different ARM processors. I've got around this
