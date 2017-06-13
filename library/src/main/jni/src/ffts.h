@@ -40,12 +40,20 @@
 #include <math.h>
 #include <stddef.h>
 #include <stdint.h>
-#include <malloc.h>
-//#include <stdalign.h>
+// #include <stdalign.h>
 
-//#include "codegen.h"
+// #include "codegen.h"
 #include "types.h"
 
+#ifndef valloc
+#include <malloc.h>
+#include <sys/sysconf.h>
+#define valloc(size) memalign(sysconf(_SC_PAGESIZE),size)
+#endif
+
+// #ifndef cacheflush
+#include <unistd.h>
+// #endif
 
 #ifdef __ANDROID__
 #include <android/log.h>
