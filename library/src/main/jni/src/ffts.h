@@ -51,10 +51,6 @@
 #define valloc(size) memalign(sysconf(_SC_PAGESIZE),size)
 #endif
 
-// #ifndef cacheflush
-#include <unistd.h>
-// #endif
-
 #ifdef __ANDROID__
 #include <android/log.h>
 #define LOG(s) __android_log_print(ANDROID_LOG_ERROR, "FFTS", s)

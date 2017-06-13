@@ -1,4 +1,4 @@
-# FFTS [![Build Status](https://travis-ci.org/billthefarmer/ffts-android.svg?branch=master)](https://travis-ci.org/billthefarmer/ffts-android)
+# ![Logo](app/src/main/res/drawable-hdpi/ic_launcher.png) FFTS [![Build Status](https://travis-ci.org/billthefarmer/ffts-android.svg?branch=master)](https://travis-ci.org/billthefarmer/ffts-android)
 
 This is a fork of the [FFST project](https://github.com/anthonix/ffts)
 for Android. I was unable to get this to build using the android build
@@ -36,4 +36,4 @@ However, the code structure is built around the autoconf/automake
 premise that you build your library for your proposed use, rather than
 build it to cope with different ARM processors. I've got around this
 by building two libraries and determining which to load at run
-time. This reuires a third library just to check the processor.
+time. This requires a third library just to check the processor.

@@ -11,6 +11,12 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
+
+        externalNativeBuild {
+            ndkBuild {
+                abiFilters 'armeabi-v7a'
+            }
+        }
     }
 
     externalNativeBuild {

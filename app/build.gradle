@@ -5,6 +5,20 @@ android {
     compileSdkVersion 'android-25'
     buildToolsVersion '24.0.2'
 
+    externalNativeBuild {
+        ndkBuild {
+	    path 'src/main/jni/Android.mk'
+	}
+    }
+
+    defaultConfig {
+        externalNativeBuild {
+            ndkBuild {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+    }
+
     lintOptions {
 	abortOnError false
     }

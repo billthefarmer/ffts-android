@@ -718,9 +718,7 @@ void ffts_generate_func_code(ffts_plan_t *p, size_t N, size_t leafN, int sign) {
 #ifdef __APPLE__
 	sys_icache_invalidate(func, p->transform_size);
 #elif __ANDROID__
-#ifdef __ARM__
 	cacheflush((long)(func), (long)(func) + p->transform_size, 0);
-#endif
 #elif __linux__
 #ifdef __GNUC__
 	__clear_cache((long)(func), (long)(func) + p->transform_size);
