@@ -12,17 +12,13 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
     }
-}
 
-android {
     externalNativeBuild {
         ndkBuild {
 	    path 'src/main/jni/Android.mk'
 	}
     }
-}
 
-android {
     lintOptions {
         ignore 'OldTargetApi'
 	abortOnError false
