@@ -11,7 +11,7 @@ android:
 
     - build-tools-24.0.2
 
-    - android-17
+    - android-25
 
 before_install:
   - git clone https://github.com/urho3d/android-ndk.git $HOME/android-ndk
