@@ -15,5 +15,4 @@ before_install:
   - export ANDROID_NDK_HOME=$HOME/android-ndk
 
 script:
-  - $ANDROID_NDK_HOME/ndk-build
-  - ant release
+  - ./gradlew build
